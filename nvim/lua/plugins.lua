@@ -48,6 +48,8 @@ return require('packer').startup(function()
     use {'tpope/vim-surround'}
     use {'windwp/nvim-ts-autotag'}
     use {'jiangmiao/auto-pairs'}
+    use {'voldikss/vim-floaterm'}
+
 
     -- Treesitter
     use {
