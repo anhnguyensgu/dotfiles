@@ -66,7 +66,7 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Shift+s --release exec flameshot gui
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --class floating
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id autotiling
 
@@ -211,10 +211,13 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [instance="floating"] floating enable
 
 for_window [class="Steam"] floating enable
 for_window [class="dota2"] fullscreen enable
 assign [class="dota2"] workspace 3
+assign [class="spotify"] workspace 5
+assign [class="thunar"] workspace 4
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
