@@ -60,7 +60,7 @@ bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b --experimental-backends
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -174,7 +174,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws4; workspace $ws5
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -201,7 +201,7 @@ for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
-# for_window [class="Thunar"] floating enable
+for_window [class="Thunar"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
@@ -215,8 +215,10 @@ for_window [instance="floating"] floating enable
 
 for_window [class="Steam"] floating enable
 for_window [class="dota2"] fullscreen enable
+
 assign [class="dota2"] workspace 3
-assign [class="spotify"] workspace 5
+assign [class="Spotify"] workspace 5
+assign [class="(spotify|Spotify)"] workspace 5
 assign [class="thunar"] workspace 4
 
 # switch to workspace with urgent window automatically
