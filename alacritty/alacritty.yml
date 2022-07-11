@@ -10,7 +10,7 @@ font:
   italic:
     family: "Recursive Code iCursive Cg"
     style: Italic
-  size: 13
+  size: 15
   offset:
     x: 0
     y: 0
@@ -343,13 +343,13 @@ key_bindings:
   - { key: RBracket, mods: Command|Shift, chars: "\x06\x6e" }
   - { key: LBracket, mods: Command|Shift, chars: "\x06\x70" }
   - { key: Return, mods: Command|Shift, chars: "\x06\x7a" }
-  - { key: Key0, mods: Control, chars: "\x06\x30" }
-  - { key: Key1, mods: Control, chars: "\x06\x31" }
-  - { key: Key2, mods: Control, chars: "\x06\x32" }
-  - { key: Key3, mods: Control, chars: "\x06\x33" }
-  - { key: Key4, mods: Control, chars: "\x06\x34" }
-  - { key: Key5, mods: Control, chars: "\x06\x35" }
-  - { key: Key6, mods: Control, chars: "\x06\x36" }
+  - { key: Key0, mods: Command, chars: "\x06\x30" }
+  - { key: Key1, mods: Command, chars: "\x06\x31" }
+  - { key: Key2, mods: Command, chars: "\x06\x32" }
+  - { key: Key3, mods: Command, chars: "\x06\x33" }
+  - { key: Key4, mods: Command, chars: "\x06\x34" }
+  - { key: Key5, mods: Command, chars: "\x06\x35" }
+  - { key: Key6, mods: Command, chars: "\x06\x36" }
   - { key: Key7, mods: Command, chars: "\x06\x37" }
   - { key: Key8, mods: Command, chars: "\x06\x38" }
   - { key: Key9, mods: Command, chars: "\x06\x39" }

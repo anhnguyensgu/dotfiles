@@ -1,12 +1,12 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tiny/.oh-my-zsh"
+export ZSH="/Users/kevin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,9 +109,10 @@ fpath=($fpath "/home/tiny/.zfunctions")
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
-prompt spaceship
+# prompt spaceship
 fpath=($fpath "/home/tiny/.zfunctions")
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 fpath=($fpath "/home/tiny/.zfunctions")
 export PATH="/home/tiny/.local/share/solana/install/active_release/bin:$PATH"
+eval "$(starship init zsh)"
