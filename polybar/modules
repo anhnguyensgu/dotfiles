@@ -2,45 +2,15 @@
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-[module/pulseaudio]
-type = internal/pulseaudio
 
-format-volume = <ramp-volume> <label-volume>
-label-volume = %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-ramp-volume-0 = 奄
-ramp-volume-1 = 奄
-ramp-volume-2 = 奄
-ramp-volume-3 = 奔
-ramp-volume-4 = 奔
-ramp-volume-5 = 奔
-ramp-volume-6 = 墳
-ramp-volume-7 = 墳
-ramp-volume-8 = 墳
-ramp-volume-9 = 墳
-ramp-volume-font = 2
-ramp-volume-foreground = ${color.BLUE}
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+[module/pipewire]
+type = custom/script
+exec = ~/.config/polybar/scripts/pipewire.sh
+interval = 3
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/scripts/pipewire.sh --mute &
+scroll-up = ~/.config/polybar/scripts/pipewire.sh --up &
+scroll-down = ~/.config/polybar/scripts/pipewire.sh --down &
 
 [module/bluetooth]
 type = custom/script
