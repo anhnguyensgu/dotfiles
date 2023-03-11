@@ -5,6 +5,7 @@
 # https://github.com/sainnhe/icursive-nerd-font
 font:
   normal:
+    # family: "CaskaydiaCove Nerd Font"
     family: "Recursive"
     style: Regular
   bold:
@@ -13,7 +14,7 @@ font:
   italic:
     family: "Recursive"
     style: Italic
-  size: 13
+  size: 16
   offset:
     x: 0
     y: 0
@@ -68,7 +69,7 @@ window:
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
   decorations: None
-  opacity: 0.94
+  opacity: 1.0
 
   # Startup Mode (changes require restart)
   #

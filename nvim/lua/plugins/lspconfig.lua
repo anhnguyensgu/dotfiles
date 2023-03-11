@@ -95,7 +95,7 @@ return function() -- TODO figure out why this don't work
 	local servers = {
 		cssls = { cmd = { "css-languageserver", "--stdio" } },
 		html = { cmd = { "html-languageserver", "--stdio" } },
-		sumneko_lua = { cmd = { "lua-language-server", "--stdio" } },
+		lua_ls = { cmd = { "lua-language-server", "--stdio" } },
 		jsonls = { cmd = { "vscode-json-languageserver", "--stdio" } },
 		tsserver = { root_dir = lspconfig.util.root_pattern("package.json") },
 		tailwindcss = { cmd = { "tailwindcss-language-server", "--stdio" } },
@@ -109,7 +109,7 @@ return function() -- TODO figure out why this don't work
 		if type(config) == "function" then
 			config = config()
 		end
-		config.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+		config.capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 		config.on_attach = commonAttach
 		lspconfig[server].setup(config)
 	end
@@ -127,7 +127,7 @@ return function() -- TODO figure out why this don't work
 		},
 		server = {
 			on_attach = commonAttach,
-			capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
+			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities),
 			settings = {
 				["rust-analyzer"] = { checkOnSave = { command = "clippy" } },
 			},
