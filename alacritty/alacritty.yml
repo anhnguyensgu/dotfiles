@@ -14,7 +14,7 @@ font:
   italic:
     family: "Recursive"
     style: Italic
-  size: 16
+  size: 15
   offset:
     x: 0
     y: 0
