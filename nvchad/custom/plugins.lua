@@ -59,7 +59,7 @@ local plugins = { -- Override plugin definition options
     "mg979/vim-visual-multi",
     branch = "master",
   },
-  { "tpope/vim-surround" },
+  { "tpope/vim-surround", lazy = false },
   {
     "phaazon/hop.nvim",
     lazy = false,

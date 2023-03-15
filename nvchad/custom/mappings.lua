@@ -18,6 +18,7 @@ M.custom = {
     },
   },
   n = {
+
     [";"] = {
       ":",
       "enter cmdline",
@@ -26,6 +27,12 @@ M.custom = {
       },
     },
     ["<leader>j"] = { "<cmd> HopChar2 <CR>", "Hope auto jump" },
+    ["<leader>x"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "close buffer",
+    },
   },
 }
 M.nvimtree = {
@@ -33,6 +40,19 @@ M.nvimtree = {
   n = {
     ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
     ["<leader>j"] = { "<cmd> HopChar2 <CR>", "Hope auto jump" },
+  },
+}
+M.telescope = {
+  plugin = true,
+  i = {
+    ["<C-q>"] = {
+      function()
+        local actions = require "telescope.actions"
+        actions.smart_send_to_qflist()
+        actions.open_qflist()
+      end,
+      "send select file to quick and open",
+    },
   },
 }
 
