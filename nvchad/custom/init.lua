@@ -5,5 +5,5 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-vim.wo.wrap = false
 
+vim.wo.wrap = false

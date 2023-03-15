@@ -62,6 +62,7 @@ local plugins = { -- Override plugin definition options
   { "tpope/vim-surround" },
   {
     "phaazon/hop.nvim",
+    lazy = false,
     branch = "v2", -- optional but strongly recommended
     config = function()
       require("hop").setup {
