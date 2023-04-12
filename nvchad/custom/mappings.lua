@@ -57,3 +57,15 @@ M.telescope = {
 }
 
 return M
+-- Quickfix override
+-- configs/telescope.lua
+-- mappings = {
+--   i = {
+--     ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+--   },
+--   n = {
+--     ["q"] = require("telescope.actions").close,
+--     ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+--   },
+-- },
+--

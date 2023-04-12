@@ -14,7 +14,7 @@ font:
   italic:
     family: "Recursive"
     style: Italic
-  size: 15
+  size: 16
   offset:
     x: 0
     y: 0
@@ -68,7 +68,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: None
+  decorations: buttonless
   opacity: 1.0
 
   # Startup Mode (changes require restart)

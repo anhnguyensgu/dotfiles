@@ -66,8 +66,10 @@ return function()
 				},
 				["<2-LeftMouse>"] = "open",
 				["<cr>"] = "open",
-				["S"] = "open_split",
-				["s"] = "open_vsplit",
+				-- ["S"] = "open_split",
+				-- ["s"] = "open_vsplit",
+				["S"] = "split_with_window_picker",
+				["s"] = "vsplit_with_window_picker",
 				["o"] = "open",
 				["z"] = "close_node",
 				["a"] = {
