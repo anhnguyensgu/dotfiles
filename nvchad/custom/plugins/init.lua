@@ -60,6 +60,7 @@ return {
 	},
 	["utilyre/barbecue.nvim"] = {
 		tag = "*",
+    lazy = false,
 		requires = {
 			"SmiteshP/nvim-navic",
 			"nvim-tree/nvim-web-devicons", -- optional dependency

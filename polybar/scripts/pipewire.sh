@@ -27,5 +27,5 @@ case $1 in
         pamixer --toggle-mute
         ;;
     *)
-        echo "Source: ${SOURCE} | Sink: ${VOLUME} ${SINK}"
+	    echo "Source: ${SOURCE} [${VOLUME}]"
 esac
