@@ -28,6 +28,7 @@ alias p="pnpm"
 alias pi="pnpm install"
 alias pd="pnpm run dev"
 alias pb="pnpm run build"
+alias hs="atuin search"
 alias push=push
 alias thanos=thanos
 
@@ -57,6 +58,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/Users/kevin/.foundry/bin"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
 eval "$(zoxide init --cmd j zsh)"
 eval "$(starship init zsh)"
 # bun completions
