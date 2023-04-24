@@ -39,6 +39,7 @@ local plugins = { -- Override plugin definition options
 	{
 		"utilyre/barbecue.nvim",
 		version = "*",
+		lazy = false,
 		dependencies = {
 			"SmiteshP/nvim-navic",
 			"nvim-tree/nvim-web-devicons", -- optional dependency
@@ -101,6 +102,35 @@ local plugins = { -- Override plugin definition options
 				},
 				other_win_hl_color = "#5c6a72",
 			})
+		end,
+	},
+	{
+		"roobert/search-replace.nvim",
+		config = function()
+			require("search-replace").setup({
+				-- optionally override defaults
+				default_replace_single_buffer_options = "gcI",
+				default_replace_multi_buffer_options = "egcI",
+			})
+			vim.api.nvim_set_keymap("n", "<leader>ro", "<CMD>SearchReplaceSingleBufferOpen<CR>", opts)
+		end,
+	},
+	{
+		"Exafunction/codeium.vim",
+		lazy = false,
+		config = function()
+			vim.keymap.set("i", "<Tab>", function()
+				return vim.fn["codeium#Accept"]()
+			end, { expr = true })
+			vim.keymap.set("i", "<c-;>", function()
+				return vim.fn["codeium#CycleCompletions"](1)
+			end, { expr = true })
+			vim.keymap.set("i", "<c-,>", function()
+				return vim.fn["codeium#CycleCompletions"](-1)
+			end, { expr = true })
+			vim.keymap.set("i", "<c-x>", function()
+				return vim.fn["codeium#Clear"]()
+			end, { expr = true })
 		end,
 	},
 }
