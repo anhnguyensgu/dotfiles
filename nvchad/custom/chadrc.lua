@@ -1,16 +1,21 @@
--- First read our docs (completely) then check the example_config repo
-
+---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-  theme_toggle = { "everforest", "everforest_light" },
-  theme = "everforest", -- default theme
-  transparency = true,
+-- Path to overriding theme and highlights files
+local highlights = require("custom.highlights")
 
+M.ui = {
+	theme = "everforest",
+	theme_toggle = { "everforest", "everforest_light" },
+	-- transparency = true,
+	-- statusline = {
+	-- 	theme = "minimal",
+	-- },
 }
 
-M.mappings = require "custom.mappings"
-M.plugins = require "custom.plugins"
+M.plugins = "custom.plugins"
 
+-- check core.mappings for table structure
+M.mappings = require("custom.mappings")
 
 return M

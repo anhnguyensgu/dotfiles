@@ -14,7 +14,10 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+vim.api.nvim_clear_autocmds({
+	group = augroup,
+	buffer = bufnr,
+})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = augroup,
@@ -44,15 +47,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-local servers = {
-	"html",
-	"cssls",
-	"rust_analyzer",
-	"tsserver",
-	"svelte",
-	"jsonls",
-	"eslint",
-}
+local servers = { "html", "cssls", "rust_analyzer", "tsserver", "svelte", "jsonls", "eslint" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

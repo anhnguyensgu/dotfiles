@@ -25,22 +25,6 @@ return {
 			require("custom.plugins.null-ls")
 		end,
 	},
-	["nvim-tree/nvim-tree.lua"] = {
-		override_options = {
-			view = {
-				adaptive_size = true,
-				side = "left",
-				width = 25,
-				hide_root_folder = true,
-				mappings = {
-					-- list = {
-					--   { key = "U", action = "dir_up" },
-					--   { key = "C", action = "change_dir" },
-					-- },
-				},
-			},
-		},
-	},
 	["tpope/vim-surround"] = {},
 	["phaazon/hop.nvim"] = {
 		branch = "v2", -- optional but strongly recommended
@@ -60,7 +44,7 @@ return {
 	},
 	["utilyre/barbecue.nvim"] = {
 		tag = "*",
-    lazy = false,
+		lazy = false,
 		requires = {
 			"SmiteshP/nvim-navic",
 			"nvim-tree/nvim-web-devicons", -- optional dependency
